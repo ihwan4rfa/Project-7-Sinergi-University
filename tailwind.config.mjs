@@ -3,8 +3,11 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		colors: {
-			primaryblue: '#094C5D',
+			blue: '#094C5D',
 			white: '#FFFFFF',
+			yellow: '#F6901E',
+			grey: '#404B5A',
+			black: '#212934',
 		},
 		extend: {},
 	},

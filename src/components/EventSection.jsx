@@ -1,0 +1,79 @@
+import React from 'react'
+
+const eventList = [
+    {
+        image: '/mini-degree.avif',
+        title: 'Mini Degree',
+        date: '26-29 April 2024',
+    },
+    {
+        image: '/admission-talk.jpg',
+        title: 'Admission Talk',
+        date: '19 April 2024',
+    },
+    {
+        image: '/open-house.jpg',
+        title: 'Open House',
+        date: '23 Maret 2024',
+    },
+    {
+        image: '/career-launchpad.jpg',
+        title: 'Career Launchpad: Empowering Vocational Future',
+        date: '1 Maret 2024',
+    },
+    {
+        image: '/mini-degree-3.jpg',
+        title: 'Mini Degree 3.0',
+        date: '26-29 April 2024',
+    },
+    {
+        image: '/admission-talk.jpg',
+        title: 'Admission Talk',
+        date: '19 April 2024',
+    },
+    {
+        image: '/open-house.jpg',
+        title: 'Open House',
+        date: '23 Maret 2024',
+    },
+    {
+        image: '/career-launchpad.jpg',
+        title: 'Career Launchpad: Empowering Vocational Future',
+        date: '1 Maret 2024',
+    },
+]
+
+const EventSection = () => {
+    return (
+        <div className='flex flex-col w-full h-[536px] py-[40px] bg-black text-white gap-10'>
+            <div className='flex flex-col gap-2 px-20'>
+                <div className='flex justify-between items-center'>
+                    <div>
+                        <h1 className='text-2xl font-semibold'>Event Kami</h1>
+                        <h1 className='text-sm'>Informasi terbaru tentang Event Universitas Sinergi</h1>
+                    </div>
+                    <div className='flex text-2xl gap-3'>
+                        <button><i class="fa-regular fa-circle-left hover:text-yellow cursor-pointer"></i></button>
+                        <button><i class="fa-regular fa-circle-right hover:text-yellow cursor-pointer"></i></button>
+                    </div>
+                </div>
+                <div className='w-full h-[2px] bg-yellow'></div>
+            </div>
+            <div className='w-auto h-[327px] flex gap-4 ml-20 overflow-x-scroll no-scrollbar rounded-l-[10px]'>
+                {eventList.map((event, index) => (
+                    <div key={index} className='cursor-pointer w-[250px] h-[327px] flex flex-col gap-[10px]'>
+                        <div className='w-[250px] h-[250px] rounded-[10px] overflow-hidden'>
+                            <img className='object-cover h-full' src={event.image} />
+                        </div>
+                        <div>
+                            <h1 className='font-bold'>{event.title}</h1>
+                            <h1 className='text-sm'>{event.date}</h1>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    )
+}
+
+export default EventSection
