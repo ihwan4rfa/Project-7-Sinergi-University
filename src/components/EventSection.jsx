@@ -1,49 +1,68 @@
-import React from 'react'
-
-const eventList = [
-    {
-        image: '/mini-degree.avif',
-        title: 'Mini Degree',
-        date: '26-29 April 2024',
-    },
-    {
-        image: '/admission-talk.jpg',
-        title: 'Admission Talk',
-        date: '19 April 2024',
-    },
-    {
-        image: '/open-house.jpg',
-        title: 'Open House',
-        date: '23 Maret 2024',
-    },
-    {
-        image: '/career-launchpad.jpg',
-        title: 'Career Launchpad: Empowering Vocational Future',
-        date: '1 Maret 2024',
-    },
-    {
-        image: '/mini-degree-3.jpg',
-        title: 'Mini Degree 3.0',
-        date: '26-29 April 2024',
-    },
-    {
-        image: '/admission-talk.jpg',
-        title: 'Admission Talk',
-        date: '19 April 2024',
-    },
-    {
-        image: '/open-house.jpg',
-        title: 'Open House',
-        date: '23 Maret 2024',
-    },
-    {
-        image: '/career-launchpad.jpg',
-        title: 'Career Launchpad: Empowering Vocational Future',
-        date: '1 Maret 2024',
-    },
-]
-
 const EventSection = () => {
+
+    const eventList = [
+        {
+            image: '/mini-degree.avif',
+            title: 'Mini Degree',
+            date: '26-29 April 2024',
+        },
+        {
+            image: '/admission-talk.jpg',
+            title: 'Admission Talk',
+            date: '19 April 2024',
+        },
+        {
+            image: '/open-house.jpg',
+            title: 'Open House',
+            date: '23 Maret 2024',
+        },
+        {
+            image: '/career-launchpad.jpg',
+            title: 'Career Launchpad: Empowering Vocational Future',
+            date: '1 Maret 2024',
+        },
+        {
+            image: '/mini-degree-3.jpg',
+            title: 'Mini Degree 3.0',
+            date: '26-29 April 2024',
+        },
+        {
+            image: '/admission-talk.jpg',
+            title: 'Admission Talk',
+            date: '19 April 2024',
+        },
+        {
+            image: '/open-house.jpg',
+            title: 'Open House',
+            date: '23 Maret 2024',
+        },
+        {
+            image: '/career-launchpad.jpg',
+            title: 'Career Launchpad: Empowering Vocational Future',
+            date: '1 Maret 2024',
+        },
+        {
+            image: '/mini-degree.avif',
+            title: 'Mini Degree',
+            date: '26-29 April 2024',
+        },
+        {
+            image: '/admission-talk.jpg',
+            title: 'Admission Talk',
+            date: '19 April 2024',
+        },
+        {
+            image: '/open-house.jpg',
+            title: 'Open House',
+            date: '23 Maret 2024',
+        },
+        {
+            image: '/career-launchpad.jpg',
+            title: 'Career Launchpad: Empowering Vocational Future',
+            date: '1 Maret 2024',
+        },
+    ]
+
     return (
         <div className='flex flex-col w-full h-[536px] py-[40px] bg-black text-white gap-10'>
             <div className='flex flex-col gap-2 px-20'>
@@ -59,7 +78,7 @@ const EventSection = () => {
                 </div>
                 <div className='w-full h-[2px] bg-yellow'></div>
             </div>
-            <div className='w-auto h-[327px] flex gap-4 ml-20 overflow-x-scroll no-scrollbar rounded-l-[10px]'>
+            <div className='w-auto h-[536px] flex gap-4 mx-20 overflow-x-scroll style-scrollbar rounded-[10px]'>
                 {eventList.map((event, index) => (
                     <div key={index} className='cursor-pointer w-[250px] h-[327px] flex flex-col gap-[10px]'>
                         <div className='w-[250px] h-[250px] rounded-[10px] overflow-hidden'>
