@@ -4,9 +4,13 @@ export default {
 	theme: {
 		colors: {
 			blue: '#094C5D',
+			bluesky: '#149FC4',
 			white: '#FFFFFF',
 			yellow: '#F6901E',
 			grey: '#404B5A',
+			grey2: '#F8F9FA',
+			grey3: '#E1E7EC',
+			grey4: '#6E7A8A',
 			black: '#212934',
 		},
 		extend: {},

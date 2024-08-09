@@ -92,7 +92,7 @@ const EventSection = () => {
     }, [currentIndex]);
 
     return (
-        <div className='flex flex-col w-full h-[536px] py-[40px] bg-black text-white gap-10'>
+        <div className='flex flex-col w-full h-[536px] py-[40px] bg-black text-white gap-10 mt-[140px]'>
             <div className='flex flex-col gap-2 px-20'>
                 <div className='flex justify-between items-center'>
                     <div>

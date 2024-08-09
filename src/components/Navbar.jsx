@@ -16,7 +16,7 @@ const Navbar = () => {
     const keys = Object.keys(languageList);
 
     return (
-        <>
+        <div className="fixed w-full z-20 top-0">
             <div className='flex w-full h-[60px] text-sm bg-white text-grey px-20 py-[10px] items-center gap-10'>
                 {keys.map((key, index) => (
                     <div key={index} className="flex cursor-pointer">
@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className='bg-blue w-full h-20 px-20 py-[10px] flex items-center justify-between'>
                 <div className='text-white flex items-center cursor-pointer'>
                     <i className="fa-solid fa-graduation-cap text-4xl pr-3" />
-                    <div className='flex flex-col gap-0'>
+                    <div className='flex flex-col font-medium'>
                         <h1 className='text-xl'>Sinergi</h1>
                         <h1 className='text-sm'>University</h1>
                     </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
