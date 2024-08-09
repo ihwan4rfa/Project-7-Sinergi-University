@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
 const EventSection = () => {
-
     const eventList = [
         {
             image: '/mini-degree.avif',
