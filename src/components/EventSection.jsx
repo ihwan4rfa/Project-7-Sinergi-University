@@ -1,3 +1,5 @@
+import { useState, useEffect, useRef } from "react";
+
 const EventSection = () => {
 
     const eventList = [
@@ -63,6 +65,33 @@ const EventSection = () => {
         },
     ]
 
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const containerRef = useRef(null);
+
+    const handleNext = () => {
+        const isLastItem = currentIndex === eventList.length - 5;
+        const newIndex = isLastItem ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
+
+    const handlePrevious = () => {
+        const isFirstItem = currentIndex === 0;
+        const newIndex = isFirstItem ? eventList.length - 5 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    };
+
+    useEffect(() => {
+        const container = containerRef.current;
+
+        if (container) {
+            container.scrollTo({
+                left: currentIndex * 266,
+                behavior: 'smooth'
+            });
+        }
+    }, [currentIndex]);
+
     return (
         <div className='flex flex-col w-full h-[536px] py-[40px] bg-black text-white gap-10'>
             <div className='flex flex-col gap-2 px-20'>
@@ -72,27 +101,29 @@ const EventSection = () => {
                         <h1 className='text-sm'>Informasi terbaru tentang Event Universitas Sinergi</h1>
                     </div>
                     <div className='flex text-2xl gap-3'>
-                        <button><i class="fa-regular fa-circle-left hover:text-yellow cursor-pointer"></i></button>
-                        <button><i class="fa-regular fa-circle-right hover:text-yellow cursor-pointer"></i></button>
+                        <button onClick={handlePrevious}><i className="fa-regular fa-circle-left hover:text-yellow cursor-pointer"></i></button>
+                        <button onClick={handleNext}><i className="fa-regular fa-circle-right hover:text-yellow cursor-pointer"></i></button>
                     </div>
                 </div>
                 <div className='w-full h-[2px] bg-yellow'></div>
             </div>
-            <div className='w-auto h-[536px] flex gap-4 mx-20 overflow-x-scroll style-scrollbar rounded-[10px]'>
-                {eventList.map((event, index) => (
-                    <div key={index} className='cursor-pointer w-[250px] h-[327px] flex flex-col gap-[10px]'>
-                        <div className='w-[250px] h-[250px] rounded-[10px] overflow-hidden'>
-                            <img className='object-cover h-full' src={event.image} />
+            <div ref={containerRef} className='w-auto h-[536px] flex mx-20 overflow-x-scroll style-scrollbar rounded-[10px]'>
+                <div className="flex gap-4">
+                    {eventList.map((event, index) => (
+                        <div key={index} className='cursor-pointer w-[250px] h-[327px] flex flex-col gap-[10px]'>
+                            <div className='w-[250px] h-[250px] rounded-[10px] overflow-hidden'>
+                                <img className='object-cover h-full' src={event.image} />
+                            </div>
+                            <div>
+                                <h1 className='font-bold'>{event.title}</h1>
+                                <h1 className='text-sm'>{event.date}</h1>
+                            </div>
                         </div>
-                        <div>
-                            <h1 className='font-bold'>{event.title}</h1>
-                            <h1 className='text-sm'>{event.date}</h1>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     )
 }
 
-export default EventSection
+export default EventSection;
