@@ -3,11 +3,8 @@ import "../../styles.css";
 import Navbar from "../../components/Navbar";
 import FooterSection from "../../components/FooterSection";
 import DetailNews from "../../components/DetailNews.astro";
-const { frontmatter } = Astro.props;
-if (!frontmatter) {
-  throw new Error("Frontmatter is undefined. Please check the markdown file.");
-}
-const { title, date, author, image, content } = frontmatter || {};
+const { frontmatter = {} } = Astro.props;
+const { title = "Default Title", date = "Unknown Date", author = "Unknown Author", content = "Unknown Content", image = "/default.jpg" } = frontmatter;
 ---
 
 <html>
