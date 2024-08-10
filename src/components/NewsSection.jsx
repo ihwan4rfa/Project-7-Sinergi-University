@@ -46,7 +46,7 @@ const NewsSection = () => {
                     </div>
                     <div className="w-1/2 h-[478px] grid grid-cols-2 grid-flow-row gap-10">
                         {newsList.map((news, index) => (
-                            <div key={index} className="h-[219px] flex flex-col gap-[10px]">
+                            <a key={index} href={`/news/roadmap-hts-codes`} className="h-[219px] flex flex-col gap-[10px]">
                                 <div className="h-[140px] w-full overflow-hidden flex items-center justify-center rounded-[10px]">
                                     <img className="object-cover w-full h-full" src={news.image} />
                                 </div>
@@ -54,7 +54,7 @@ const NewsSection = () => {
                                     <h1 className="font-semibold leading-[19px] text-ellipsis overflow-hidden line-clamp-2">{news.title}</h1>
                                     <h1 className="text-sm">{news.date}<span className="mx-[10px]">•</span>Oleh {news.author}</h1>
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>
