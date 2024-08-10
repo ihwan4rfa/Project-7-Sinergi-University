@@ -2,7 +2,9 @@
 import "../../styles.css";
 import Navbar from "../../components/Navbar";
 import FooterSection from "../../components/FooterSection";
-import DetailNews from "../../components/DetailNews";
+import DetailNews from "../../components/DetailNews.astro";
+const { frontmatter } = Astro.props;
+const { title, date, author, image, content } = frontmatter;
 ---
 
 <html>
@@ -19,7 +21,7 @@ import DetailNews from "../../components/DetailNews";
     </head>
     <body>
         <Navbar />
-        <DetailNews />
+        <DetailNews {title} {date} {author} {image} {content} />
         <FooterSection />
     </body>
 </html>

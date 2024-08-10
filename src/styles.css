@@ -4,22 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
+    scroll-behavior: smooth;
     font-family: 'Rubik', sans-serif;
+    scroll-padding-top: 140px;
 }
 
 .style-scrollbar::-webkit-scrollbar {
-    width: 10px;  
+    width: 10px;
     height: 10px;
 }
 
 .style-scrollbar::-webkit-scrollbar-track {
-    background: #404B5A; 
+    background: #404B5A;
     border-radius: 10px;
 }
 
 .style-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #6E7A8A; 
-    border-radius: 10px; 
+    background-color: #6E7A8A;
+    border-radius: 10px;
     cursor: pointer;
 }

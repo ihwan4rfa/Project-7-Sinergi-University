@@ -92,7 +92,7 @@ const EventSection = () => {
     }, [currentIndex]);
 
     return (
-        <div className='flex flex-col w-full h-[536px] py-[40px] bg-black text-white gap-10 mt-[140px]'>
+        <div id="event" className='flex flex-col w-full h-[536px] py-[40px] bg-black text-white gap-10 mt-[140px]'>
             <div className='flex flex-col gap-2 px-20'>
                 <div className='flex justify-between items-center'>
                     <div>
@@ -109,15 +109,15 @@ const EventSection = () => {
             <div ref={containerRef} className='w-auto h-[536px] flex mx-20 overflow-x-scroll style-scrollbar rounded-[10px]'>
                 <div className="flex gap-4">
                     {eventList.map((event, index) => (
-                        <div key={index} className='cursor-pointer w-[250px] h-[327px] flex flex-col gap-[10px]'>
+                        <a key={index} className='group cursor-pointer w-[250px] h-[327px] flex flex-col gap-[10px]'>
                             <div className='w-[250px] h-[250px] rounded-[10px] overflow-hidden'>
                                 <img className='object-cover h-full' src={event.image} />
                             </div>
                             <div>
-                                <h1 className='font-bold'>{event.title}</h1>
+                                <h1 className='font-bold group-hover:text-bluesky'>{event.title}</h1>
                                 <h1 className='text-sm'>{event.date}</h1>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>

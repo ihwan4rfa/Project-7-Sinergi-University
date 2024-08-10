@@ -19,10 +19,10 @@ const FooterSection = () => {
                     </div>
                 </div>
                 <div className="w-1/3 grid grid-cols-2 grid-flow-row gap-3 font-semibold">
-                    <button className="flex justify-start items-center w-fit">Academic<i class="fa-solid fa-arrow-right ml-2 text-sm text-bluesky"></i></button>
-                    <button className="flex justify-start items-center w-fit">News<i class="fa-solid fa-arrow-right ml-2 text-sm text-bluesky"></i></button>
-                    <button className="flex justify-start items-center w-fit">Admission<i class="fa-solid fa-arrow-right ml-2 text-sm text-bluesky"></i></button>
-                    <button className="flex justify-start items-center w-fit">About Us<i class="fa-solid fa-arrow-right ml-2 text-sm text-bluesky"></i></button>
+                    <button className="flex justify-start items-center w-fit hover:text-bluesky">Academic<i class="fa-solid fa-arrow-right ml-2 text-sm text-bluesky"></i></button>
+                    <button className="flex justify-start items-center w-fit hover:text-bluesky">News<i class="fa-solid fa-arrow-right ml-2 text-sm text-bluesky"></i></button>
+                    <button className="flex justify-start items-center w-fit hover:text-bluesky">Admission<i class="fa-solid fa-arrow-right ml-2 text-sm text-bluesky"></i></button>
+                    <button className="flex justify-start items-center w-fit hover:text-bluesky">About Us<i class="fa-solid fa-arrow-right ml-2 text-sm text-bluesky"></i></button>
                 </div>
             </div>
             <div className='w-full h-[2px] bg-grey3'></div>

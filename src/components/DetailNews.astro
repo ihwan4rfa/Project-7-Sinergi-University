@@ -1,0 +1,56 @@
+---
+const allNews = await Astro.glob("../pages/news/*.md");
+const { title, date, author, image, content } = Astro.props;
+---
+
+<div class="mt-[140px] flex flex-col">
+    <div class="flex px-20 w-full h-[64px] items-center gap-[10px] text-grey4">
+        <h1 class="text-bluesky">Berita</h1>
+        <i class="fa-solid fa-chevron-right text-sm px-3"></i>
+        <h1>{title}</h1>
+    </div>
+    <div class="flex w-full py-10 px-20 gap-10">
+        <div class="w-3/5 h-fit flex flex-col gap-10">
+            <div class="flex flex-col gap-5">
+                <h1 class="font-semibold text-2xl">{title}</h1>
+                <div class="flex items-center text-grey5">
+                    <h1>Oleh {author}</h1>
+                    <h1 class="mx-2">•</h1>
+                    <div class="flex items-center">
+                        <i class="fa-regular fa-calendar-days mr-2"></i>
+                        <h1>{date}</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <div class="overflow-hidden w-full h-[413px] rounded-[10px]">
+                    <img class="w-full h-full object-cover" src={image} />
+                </div>
+            </div>
+            <div class="leading-7">{content}</div>
+            <div class="flex flex-col gap-2">
+                <h1 class="text-sm font-semibold">Share</h1>
+                <div class="flex text-sm text-white gap-3">
+                    <a href="https://www.linkedin.com/in/ihwanarfa" target="_blank" class="w-6 h-6 bg-bluesky hover:bg-blue flex items-center justify-center rounded-full"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/ihwanarfa" target="_blank" class="w-6 h-6 bg-bluesky hover:bg-blue flex items-center justify-center rounded-full"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/6285875029000" target="_blank" class="w-6 h-6 bg-bluesky hover:bg-blue flex items-center justify-center rounded-full"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.twitter.com/ihwanarfa" target="_blank" class="w-6 h-6 bg-bluesky hover:bg-blue flex items-center justify-center rounded-full"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://wa.me/6285875029000" target="_blank" class="w-6 h-6 bg-bluesky hover:bg-blue flex items-center justify-center rounded-full"><i class="fa-solid fa-share-nodes"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="w-2/5 h-40">
+            <h1 class="text-xl font-semibold">Berita Terkait</h1>
+            {allNews.map((news) => (
+                <a href={news.url} class="flex flex-col px-3 py-5 w-full gap-3 border-b-2 border-grey6 group">
+                    <h1 class="font-semibold group-hover:text-bluesky">{news.frontmatter.title}</h1>
+                    <div class="flex text-sm text-grey5">
+                        <h1><i class="fa-regular fa-user mr-2" />{news.frontmatter.author}</h1>
+                        <h1 class="mx-2">•</h1>
+                        <h1><i class="fa-regular fa-calendar-days mr-2" />{news.frontmatter.date}</h1>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </div>
+</div>

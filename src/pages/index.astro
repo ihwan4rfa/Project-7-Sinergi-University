@@ -2,7 +2,7 @@
 import "../styles.css";
 import Navbar from "../components/Navbar";
 import EventSection from "../components/EventSection";
-import NewsSection from "../components/NewsSection";
+import NewsSection from "../components/NewsSection.astro";
 import MahasiswaSection from "../components/MahasiswaSection";
 import StafAndDosenSection from "../components/StafAndDosenSection";
 import MitraAndPersSection from "../components/MitraAndPersSection";
@@ -22,7 +22,7 @@ import FooterSection from "../components/FooterSection";
 		<title>Sinergi University</title>
 	</head>
 	<body>
-		<Navbar />
+		<Navbar client:load />
 		<EventSection client:load />
 		<NewsSection />
 		<MahasiswaSection />
