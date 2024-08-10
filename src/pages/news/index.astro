@@ -4,7 +4,10 @@ import Navbar from "../../components/Navbar";
 import FooterSection from "../../components/FooterSection";
 import DetailNews from "../../components/DetailNews.astro";
 const { frontmatter } = Astro.props;
-const { title, date, author, image, content } = frontmatter;
+if (!frontmatter) {
+  throw new Error("Frontmatter is undefined. Please check the markdown file.");
+}
+const { title, date, author, image, content } = frontmatter || {};
 ---
 
 <html>
