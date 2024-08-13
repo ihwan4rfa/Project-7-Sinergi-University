@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+id: "news3"
 category: "Berita"
 image: '/3.jpg'
 title: 'IMF World Economic Outlook Revises Growth Forecasts'

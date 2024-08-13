@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+id: "news8"
 category: "Berita Staf & Dosen"
 image: '/2.jpg'
 title: 'We’re moving Masks for NHS Heroes and we need your support'

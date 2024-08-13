@@ -1,11 +1,11 @@
 ---
 layout: "index.astro"
-id: "news6"
-category: "Berita Mahasiswa"
-image: '/1.jpg'
-title: 'Transpacific Shifts: Import Demand Is Changing the World’s Busiest Trade Lane'
-date: '10 Jun 2023'
-author: 'Ihwan Arfa'
+id: "news4"
+category: "Berita Mitra & Pers"
+image: '/7.jpg'
+title: 'We’re moving Masks for NHS Heroes and we need your support'
+date: '1 Jan 2023'
+author: 'Hashirama'
 content: "Lorem ipsum dolor sit amet consectetur. Eu egestas amet
                 venenatis volutpat. Ultricies orci sagittis quis mi. Arcu nulla
                 nibh lacinia vulputate molestie sed odio. Diam ultricies ipsum

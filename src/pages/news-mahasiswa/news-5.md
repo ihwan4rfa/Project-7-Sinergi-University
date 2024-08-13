@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+id: "news5"
 category: "Berita Mahasiswa"
 image: '/9.jpg'
 title: 'Your Must-Read Roadmap to Optimize for New HTS Codes'

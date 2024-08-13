@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+id: "news4"
 category: "Berita Mahasiswa"
 image: '/8.jpg'
 title: 'We’re moving Masks for NHS Heroes and we need your support'

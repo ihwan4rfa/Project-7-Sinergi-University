@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+id: "news7"
 category: "Berita Staf & Dosen"
 image: '/3.jpg'
 title: 'IMF World Economic Outlook Revises Growth Forecasts'

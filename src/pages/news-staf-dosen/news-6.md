@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+id: "news6"
 category: "Berita Staf & Dosen"
 image: '/4.jpg'
 title: 'Transpacific Shifts: Import Demand Is Changing the World’s Busiest Trade Lane'

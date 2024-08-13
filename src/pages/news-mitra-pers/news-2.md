@@ -1,8 +1,8 @@
 ---
 layout: "index.astro"
-id: "news6"
-category: "Berita Mahasiswa"
-image: '/1.jpg'
+id: "news2"
+category: "Berita Mitra & Pers"
+image: '/5.jpg'
 title: 'Transpacific Shifts: Import Demand Is Changing the World’s Busiest Trade Lane'
 date: '10 Jun 2023'
 author: 'Ihwan Arfa'

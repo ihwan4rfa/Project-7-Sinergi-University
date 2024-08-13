@@ -5,6 +5,7 @@ import FooterSection from "../../components/FooterSection";
 import DetailNews from "../../components/DetailNews.astro";
 const { frontmatter = {} } = Astro.props;
 const {
+    id = "Default Id",
     title = "Default Title",
     category = "Unknown Category",
     date = "Unknown Date",
@@ -28,7 +29,7 @@ const {
     </head>
     <body>
         <Navbar />
-        <DetailNews {title} {category} {date} {author} {image} {content} />
+        <DetailNews {id} {title} {category} {date} {author} {image} {content} />
         <FooterSection />
     </body>
 </html>

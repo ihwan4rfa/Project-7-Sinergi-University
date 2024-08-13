@@ -1,11 +1,11 @@
 ---
 layout: "index.astro"
-id: "news6"
-category: "Berita Mahasiswa"
-image: '/1.jpg'
-title: 'Transpacific Shifts: Import Demand Is Changing the World’s Busiest Trade Lane'
-date: '10 Jun 2023'
-author: 'Ihwan Arfa'
+id: "news1"
+category: "Berita Mitra & Pers"
+image: "/4.jpg"
+title: "Your Must-Read Roadmap to Optimize for New HTS Codes"
+date: "21 Sept 2023"
+author: "John Doe"
 content: "Lorem ipsum dolor sit amet consectetur. Eu egestas amet
                 venenatis volutpat. Ultricies orci sagittis quis mi. Arcu nulla
                 nibh lacinia vulputate molestie sed odio. Diam ultricies ipsum

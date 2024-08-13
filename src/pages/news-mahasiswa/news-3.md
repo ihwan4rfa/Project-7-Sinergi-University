@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+id: "news3"
 category: "Berita Mahasiswa"
 image: '/7.jpg'
 title: 'IMF World Economic Outlook Revises Growth Forecasts'
