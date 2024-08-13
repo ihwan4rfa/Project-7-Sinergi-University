@@ -48,7 +48,7 @@ if (category === 'Berita') {
         </div>
         <div class="w-2/5 h-40">
             <h1 class="text-xl font-semibold">{category} Terkait</h1>
-            {newsByCategory.map((news) => (
+            {newsByCategory && newsByCategory.map((news) => (
                 <a href={news.url} class="flex flex-col px-3 py-5 w-full gap-3 border-b-2 border-grey6 group">
                     <h1 class="font-semibold group-hover:text-bluesky">{news.frontmatter.title}</h1>
                     <div class="flex text-sm text-grey5">
