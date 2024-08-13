@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+category: "Berita"
 image: '/3.jpg'
 title: 'IMF World Economic Outlook Revises Growth Forecasts'
 date: '17 Agu 2023'

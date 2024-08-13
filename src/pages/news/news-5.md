@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+category: "Berita"
 image: '/port-workers.jpg'
 title: 'Port Workers Portray the Reality of Bottlenecks'
 date: '21 Sept 2023'

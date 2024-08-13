@@ -1,10 +1,10 @@
 ---
 layout: "index.astro"
-category: "Berita"
-image: '/4.jpg'
-title: 'We’re moving Masks for NHS Heroes and we need your support'
-date: '1 Jan 2023'
-author: 'Hashirama'
+category: "Berita Mahasiswa"
+image: '/6.jpg'
+title: 'Transpacific Shifts: Import Demand Is Changing the World’s Busiest Trade Lane'
+date: '10 Jun 2023'
+author: 'Ihwan Arfa'
 content: "Lorem ipsum dolor sit amet consectetur. Eu egestas amet
                 venenatis volutpat. Ultricies orci sagittis quis mi. Arcu nulla
                 nibh lacinia vulputate molestie sed odio. Diam ultricies ipsum

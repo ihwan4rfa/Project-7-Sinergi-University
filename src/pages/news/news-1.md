@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+category: "Berita"
 image: "/1.jpg"
 title: "Your Must-Read Roadmap to Optimize for New HTS Codes"
 date: "21 Sept 2023"

@@ -1,0 +1,33 @@
+---
+const allNewsMahasiswa = await Astro.glob("../pages/news-mahasiswa/*.md");
+---
+
+<div class="flex flex-col w-full h-[657px] py-[40px] px-20 text-black gap-10">
+    <div class="flex flex-col gap-2">
+        <div class="flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-semibold">Mahasiswa</h1>
+                <h1 class="text-sm">
+                    Berita terkini mengenai aktivitas, prestasi, dan riset
+                    mahasiswa
+                </h1>
+            </div>
+        </div>
+        <div class="w-full h-[2px] bg-yellow"></div>
+    </div>
+    <div class="w-full h-[478px] grid grid-cols-4 grid-flow-row gap-10">
+        {allNewsMahasiswa.map((news) => (
+            <a href={news.url} class="cursor-pointer h-[219px] flex flex-col gap-[10px] group">
+                <div class="h-[140px] w-full overflow-hidden flex items-center justify-center rounded-[10px]">
+                    <img class="object-cover w-full h-full" src={news.frontmatter.image} />
+                </div>
+                <div class="flex flex-col h-[69px] gap-[10px]">
+                    <h1 class="font-semibold leading-[19px] text-ellipsis overflow-hidden line-clamp-2 group-hover:text-bluesky">
+                        {news.frontmatter.title}
+                    </h1>
+                    <h1 class="text-sm">{news.frontmatter.date}<span class="mx-[10px]">•</span>Oleh {news.frontmatter.author}</h1>
+                </div>
+            </a>
+        ))}
+    </div>
+</div>

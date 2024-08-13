@@ -1,7 +1,7 @@
 ---
 layout: "index.astro"
-category: "Berita"
-image: '/4.jpg'
+category: "Berita Mahasiswa"
+image: '/8.jpg'
 title: 'We’re moving Masks for NHS Heroes and we need your support'
 date: '1 Jan 2023'
 author: 'Hashirama'

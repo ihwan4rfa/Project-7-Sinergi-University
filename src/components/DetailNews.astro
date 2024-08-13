@@ -1,11 +1,18 @@
 ---
 const allNews = await Astro.glob("../pages/news/*.md");
-const { title, date, author, image, content } = Astro.props;
----
+const allNewsMahasiswa = await Astro.glob("../pages/news-mahasiswa/*.md");
+const { title, category, date, author, image, content } = Astro.props;
 
+let newsByCategory = null;
+if (category === 'Berita') {
+    newsByCategory = allNews;
+} else if (category === 'Berita Mahasiswa') {
+    newsByCategory = allNewsMahasiswa;
+}
+---
 <div class="mt-[140px] flex flex-col">
     <div class="flex px-20 w-full h-[64px] items-center gap-[10px] text-grey4">
-        <h1 class="text-bluesky">Berita</h1>
+        <h1 class="text-bluesky">{category}</h1>
         <i class="fa-solid fa-chevron-right text-sm px-3"></i>
         <h1>{title}</h1>
     </div>
@@ -40,8 +47,8 @@ const { title, date, author, image, content } = Astro.props;
             </div>
         </div>
         <div class="w-2/5 h-40">
-            <h1 class="text-xl font-semibold">Berita Terkait</h1>
-            {allNews.map((news) => (
+            <h1 class="text-xl font-semibold">{category} Terkait</h1>
+            {newsByCategory.map((news) => (
                 <a href={news.url} class="flex flex-col px-3 py-5 w-full gap-3 border-b-2 border-grey6 group">
                     <h1 class="font-semibold group-hover:text-bluesky">{news.frontmatter.title}</h1>
                     <div class="flex text-sm text-grey5">

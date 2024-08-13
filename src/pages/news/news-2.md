@@ -1,5 +1,6 @@
 ---
 layout: "index.astro"
+category: "Berita"
 image: '/2.jpg'
 title: 'Transpacific Shifts: Import Demand Is Changing the World’s Busiest Trade Lane'
 date: '10 Jun 2023'
