@@ -7,10 +7,12 @@ const Navbar = () => {
     }, [])
 
     const linkList = {
-        news: 'berita',
         akademik: 'akademik',
-        admisi: 'admisi',
-        beasiswa: 'beasiswa',
+        event: 'event',
+        news: 'berita',
+        mahasiswa: 'mahasiswa',
+        stafdosen: 'staf & dosen',
+        mitrapers: 'mitra & pers',
         about: 'tentang kami'
     }
 

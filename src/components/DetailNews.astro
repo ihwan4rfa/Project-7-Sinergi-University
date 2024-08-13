@@ -1,6 +1,7 @@
 ---
 const allNews = await Astro.glob("../pages/news/*.md");
 const allNewsMahasiswa = await Astro.glob("../pages/news-mahasiswa/*.md");
+const allNewsStafDosen = await Astro.glob("../pages/news-staf-dosen/*.md");
 const { title, category, date, author, image, content } = Astro.props;
 
 let newsByCategory = null;
@@ -8,6 +9,8 @@ if (category === 'Berita') {
     newsByCategory = allNews;
 } else if (category === 'Berita Mahasiswa') {
     newsByCategory = allNewsMahasiswa;
+} else if (category === 'Berita Staf & Dosen') {
+    newsByCategory = allNewsStafDosen;
 }
 ---
 <div class="mt-[140px] flex flex-col">
